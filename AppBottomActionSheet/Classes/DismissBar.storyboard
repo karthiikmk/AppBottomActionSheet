@@ -13,7 +13,7 @@
         <!--Dismiss BarVC-->
         <scene sceneID="cFs-cf-9hT">
             <objects>
-                <viewController storyboardIdentifier="DismissBarVC" id="h5B-fa-pnc" customClass="DismissBarVC" customModule="GTSheet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DismissBarVC" id="h5B-fa-pnc" customClass="DismissBarVC" customModule="AppBottomActionSheet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="YGM-in-2Br">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,7 +44,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.36862745099999999" green="0.7843137255" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="oez-Fr-Vle" firstAttribute="centerX" secondItem="YGM-in-2Br" secondAttribute="centerX" id="6GZ-6O-CQc"/>
                             <constraint firstAttribute="bottom" secondItem="oez-Fr-Vle" secondAttribute="bottom" id="EjU-s5-Tqc"/>

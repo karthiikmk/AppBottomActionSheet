@@ -1,16 +1,16 @@
 //
-//  DismissalAnimator.swift
-//  Gametime
+//  ViewController.swift
+//  AppBottomActionSheet
 //
-//  Created by Matt Banach on 3/24/16.
-//
+//  Created by karthikAdaptavant on 03/21/2018.
+//  Copyright (c) 2018 karthikAdaptavant. All rights reserved.
 //
 
 import Foundation
 
 public class DismissalAnimator: UIPercentDrivenInteractiveTransition, UIViewControllerAnimatedTransitioning, AnimatorConvenience {
 
-    weak var manager: HalfSheetPresentationManager?
+    weak public var manager: HalfSheetPresentationManager?
 
     var isFromGesture: Bool = false
     var animator: UIViewPropertyAnimator?

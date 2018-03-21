@@ -1,9 +1,9 @@
 //
-//  VerticalPanGestureRecognizer.swift
-//  Gametime
+//  ViewController.swift
+//  AppBottomActionSheet
 //
-//  Created by Matt Banach on 4/8/16.
-//
+//  Created by karthikAdaptavant on 03/21/2018.
+//  Copyright (c) 2018 karthikAdaptavant. All rights reserved.
 //
 
 import Foundation

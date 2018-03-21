@@ -1,9 +1,9 @@
 //
-//  HalfSheetPresentationManager.swift
-//  Gametime
+//  ViewController.swift
+//  AppBottomActionSheet
 //
-//  Created by Matt Banach on 3/22/16.
-//
+//  Created by karthikAdaptavant on 03/21/2018.
+//  Copyright (c) 2018 karthikAdaptavant. All rights reserved.
 //
 
 import Foundation
@@ -256,7 +256,7 @@ extension HalfSheetPresentationManager {
 
 extension HalfSheetPresentationManager: AnimatorConvenience {
 
-    weak var manager: HalfSheetPresentationManager? {
+    weak public var manager: HalfSheetPresentationManager? {
         return self
     }
 }

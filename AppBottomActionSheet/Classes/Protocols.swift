@@ -1,9 +1,9 @@
 //
-//  HalfSheetPresentableProtocol.swift
-//  Gametime
+//  ViewController.swift
+//  AppBottomActionSheet
 //
-//  Matt Banach on 2/21/17.
-//
+//  Created by karthikAdaptavant on 03/21/2018.
+//  Copyright (c) 2018 karthikAdaptavant. All rights reserved.
 //
 
 import UIKit
@@ -43,8 +43,8 @@ public protocol HalfSheetPresentableProtocol: class {
 }
 
 public protocol HalfSheetTopVCProviderProtocol: class {
-    var topVC: UIViewController { get }
-    var topVCTransitionStyle: HalfSheetTopVCTransitionStyle { get }
+     var topVC: UIViewController { get }
+     var topVCTransitionStyle: HalfSheetTopVCTransitionStyle { get }
 }
 
 public protocol HalfSheetCompletionProtocol: class {
@@ -56,7 +56,7 @@ public protocol HalfSheetAppearanceProtocol: class {
 }
 
 public extension HalfSheetPresentableProtocol where Self: UIViewController {
-    func didUpdateSheetHeight() {
+    public func didUpdateSheetHeight() {
         (navigationController?.transitioningDelegate as? HalfSheetPresentationManager ?? transitioningDelegate as? HalfSheetPresentationManager)?.didChangeSheetHeight()
     }
 }

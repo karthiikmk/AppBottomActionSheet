@@ -1,14 +1,14 @@
 //
-//  AnimatorConvenience.swift
-//  GTSheet
+//  ViewController.swift
+//  AppBottomActionSheet
 //
-//  Created by Matt Banach on 12/7/17.
-//  Copyright © 2017 Gametime. All rights reserved.
+//  Created by karthikAdaptavant on 03/21/2018.
+//  Copyright (c) 2018 karthikAdaptavant. All rights reserved.
 //
 
 import Foundation
 
-protocol AnimatorConvenience {
+public protocol AnimatorConvenience {
     weak var manager: HalfSheetPresentationManager? { get }
 }
 

@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import AppBottomActionSheet
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, HalfSheetPresentingProtocol {
+    
+    var transitionManager: HalfSheetPresentationManager!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +24,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func btnAct(_ sender: Any) {
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        presentUsingHalfSheet(vc)
+    }
 }
 

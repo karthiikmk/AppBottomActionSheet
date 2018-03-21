@@ -1,16 +1,16 @@
 //
-//  PresentationViewController.swift
-//  Gametime
+//  ViewController.swift
+//  AppBottomActionSheet
 //
-//  Created by Matt Banach on 3/24/16.
-//
+//  Created by karthikAdaptavant on 03/21/2018.
+//  Copyright (c) 2018 karthikAdaptavant. All rights reserved.
 //
 
 import Foundation
 
 public class PresentationViewController: UIPresentationController, AnimatorConvenience {
 
-    weak var manager: HalfSheetPresentationManager?
+    weak public var manager: HalfSheetPresentationManager?
 
     lazy var backgroundView: UIView = { [unowned self] in
         let view = UIView()
@@ -47,10 +47,7 @@ public class PresentationViewController: UIPresentationController, AnimatorConve
 
     public func updateSheetHeight() {
 
-        guard
-            let presentedView = presentedView,
-            let _ = presentedView.superview
-        else {
+        guard let presentedView = presentedView, let _ = presentedView.superview else {
             return
         }
 
@@ -68,10 +65,7 @@ public class PresentationViewController: UIPresentationController, AnimatorConve
             UIEdgeInsets(withBottom: containerHeight - topContainerOffset)
         ) ?? []
 
-        let animator = UIViewPropertyAnimator(
-            duration: 0.4,
-            timingParameters: UISpringTimingParameters(dampingRatio: 1)
-        )
+        let animator = UIViewPropertyAnimator(duration: 0.4, timingParameters: UISpringTimingParameters(dampingRatio: 1))
 
         animator.addAnimations { [weak self] in
             self?.containerView?.layoutIfNeeded()

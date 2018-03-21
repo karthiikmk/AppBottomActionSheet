@@ -1,9 +1,9 @@
 //
-//  PresentationAnimator.swift
-//  Gametime
+//  ViewController.swift
+//  AppBottomActionSheet
 //
-//  Created by Matt Banach on 3/24/16.
-//
+//  Created by karthikAdaptavant on 03/21/2018.
+//  Copyright (c) 2018 karthikAdaptavant. All rights reserved.
 //
 
 import Foundation
@@ -69,12 +69,9 @@ class PresentationAnimator: NSObject, UIViewControllerAnimatedTransitioning, Ani
 
     func backgroundTransform(rect: CGRect) -> CATransform3D {
 
-        let statusBarHeight = max(28.0, UIApplication.shared.statusBarFrame.height)
-        let scaleFactor = (containerWidth - 16) / containerWidth
-        let backgroundViewPointsFromTop = (containerHeight - (containerHeight * scaleFactor)) / 2
-
-        let scale = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
-        let transform = CGAffineTransform(translationX: 0, y: statusBarHeight - backgroundViewPointsFromTop)
+        //let statusBarHeight = max(28.0, UIApplication.shared.statusBarFrame.height)
+        let scale = CGAffineTransform(scaleX: 1, y: 1)
+        let transform = CGAffineTransform(translationX: 0, y: 0)
 
         return transform.concatenating(scale).as3D
     }

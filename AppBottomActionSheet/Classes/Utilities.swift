@@ -1,11 +1,10 @@
 //
-//  Util.swift
-//  GTHalfSheet
+//  ViewController.swift
+//  AppBottomActionSheet
 //
-//  Created by Matt Banach on 9/22/17.
-//  Copyright © 2017 Gametime. All rights reserved.
+//  Created by karthikAdaptavant on 03/21/2018.
+//  Copyright (c) 2018 karthikAdaptavant. All rights reserved.
 //
-
 import Foundation
 
 extension UIView {
@@ -18,29 +17,15 @@ extension UIView {
 
         translatesAutoresizingMaskIntoConstraints = false
 
-        let horizontalConstraints = NSLayoutConstraint.constraints(
-            withVisualFormat: "H:|-left-[subview]-right-|",
-            options: [],
-            metrics: [
-                "left": edgeInsets.left,
-                "right": edgeInsets.right
-            ],
-            views: [
-                "subview": self
-            ]
-        )
+        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-left-[subview]-right-|",
+                                                                   options: [],
+                                                                   metrics: ["left": edgeInsets.left, "right": edgeInsets.right],
+                                                                   views: ["subview": self])
 
-        let verticalConstraints = NSLayoutConstraint.constraints(
-            withVisualFormat: "V:|-top-[subview]-bottom-|",
-            options: [],
-            metrics: [
-                "top": edgeInsets.top,
-                "bottom": edgeInsets.bottom
-            ],
-            views: [
-                "subview": self
-            ]
-        )
+        let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-top-[subview]-bottom-|",
+                                                                 options: [],
+                                                                 metrics: ["top": edgeInsets.top, "bottom": edgeInsets.bottom],
+                                                                 views: ["subview": self])
 
         superview.addConstraints(horizontalConstraints + verticalConstraints)
 
@@ -62,9 +47,7 @@ extension UIView {
 
     func snapshot() -> UIImage {
         UIGraphicsBeginImageContextWithOptions(bounds.size, false, UIScreen.main.scale)
-
         drawHierarchy(in: self.bounds, afterScreenUpdates: false)
-        
         let image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         return image
