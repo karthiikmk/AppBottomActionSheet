@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AppBottomActionSheet_Example' do
+  pod 'AppBottomActionSheet', :path => '../'
+
+  target 'AppBottomActionSheet_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
