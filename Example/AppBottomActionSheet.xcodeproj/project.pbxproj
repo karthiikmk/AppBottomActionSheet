@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		256C16EA206248EC007A32CA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 256C16E9206248EC007A32CA /* .gitignore */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -28,7 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03A2743066FF83EDB2F9EB28 /* AppBottomActionSheet.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = AppBottomActionSheet.podspec; path = ../AppBottomActionSheet.podspec; sourceTree = "<group>"; };
+		03A2743066FF83EDB2F9EB28 /* AppBottomActionSheet.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AppBottomActionSheet.podspec; path = ../AppBottomActionSheet.podspec; sourceTree = "<group>"; };
+		256C16E9206248EC007A32CA /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4C3BA6ECE9F7D2F176AB1FBF /* Pods-AppBottomActionSheet_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBottomActionSheet_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppBottomActionSheet_Tests/Pods-AppBottomActionSheet_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* AppBottomActionSheet_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBottomActionSheet_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,8 +42,8 @@
 		607FACE51AFB9204008FA782 /* AppBottomActionSheet_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppBottomActionSheet_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6629F7EA36279FCA6E39EC90 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		8AB42E91187129D96A2D6AA2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6629F7EA36279FCA6E39EC90 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		8AB42E91187129D96A2D6AA2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		90A3ADDFC9872844C3FB28B8 /* Pods-AppBottomActionSheet_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBottomActionSheet_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppBottomActionSheet_Example/Pods-AppBottomActionSheet_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A81BB6843CD001F2935CED89 /* Pods-AppBottomActionSheet_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBottomActionSheet_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppBottomActionSheet_Tests/Pods-AppBottomActionSheet_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DB640DBB74D225C81025653F /* Pods-AppBottomActionSheet_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBottomActionSheet_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppBottomActionSheet_Example/Pods-AppBottomActionSheet_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				256C16E9206248EC007A32CA /* .gitignore */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for AppBottomActionSheet */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -248,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				256C16EA206248EC007A32CA /* .gitignore in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
