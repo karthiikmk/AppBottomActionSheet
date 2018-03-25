@@ -27,6 +27,7 @@ public enum DismissMethod {
 }
 
 internal extension Array where Element == DismissMethod {
+    
     internal var allowSwipe: Bool {
         return contains(.swipe)
     }
@@ -51,8 +52,9 @@ public protocol HalfSheetCompletionProtocol: class {
     func didDismiss()
 }
 
-public protocol HalfSheetAppearanceProtocol: class {
-    var cornerRadius: CGFloat { get }
+public protocol HalfSheetAppearanceProtocol: class {    
+    var presentAnimationDuration: TimeInterval { get }
+    var dismissAnimationDuration: TimeInterval { get }
 }
 
 public extension HalfSheetPresentableProtocol where Self: UIViewController {

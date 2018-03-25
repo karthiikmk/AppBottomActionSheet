@@ -73,20 +73,26 @@ public class HalfSheetPresentationManager: NSObject, UIGestureRecognizerDelegate
     }
 
     @objc func handleDismissingPan(_ pan: UIPanGestureRecognizer) {
+        
         guard allowTapToDismiss, !isScrolling else { return }
 
         let translation = pan.translation(in: containerView)
+        
         let velocity = pan.velocity(in: containerView)
 
         let d: CGFloat = max(translation.y, 0) / containerHeight
 
         switch pan.state {
+            
         case .began:
+            
             guard velocity.y > 0 else { return }
             HapticHelper.warmUp()
             dismissalAnimation.isFromGesture = true
             dismissPresentedVC()
+            
         case .changed:
+            
             dismissalAnimation.update(d)
 
             if max(translation.y, 0) > TransitionConfiguration.Dismissal.dismissBreakpoint {
@@ -94,8 +100,8 @@ public class HalfSheetPresentationManager: NSObject, UIGestureRecognizerDelegate
                 HapticHelper.impact()
                 dismissalAnimation.finish()
             }
+            
         default:
-
             func commitTransition() {
                 dismissalAnimation.finish()
             }
@@ -104,7 +110,7 @@ public class HalfSheetPresentationManager: NSObject, UIGestureRecognizerDelegate
                 dismissalAnimation.isFromGesture = false
                 dismissalAnimation.cancel()
             }
-
+            
             translation.y > TransitionConfiguration.Dismissal.dismissBreakpoint ? commitTransition() : cancelTransition()
         }
     }

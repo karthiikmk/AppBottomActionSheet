@@ -18,7 +18,12 @@ class PresentationAnimator: NSObject, UIViewControllerAnimatedTransitioning, Ani
     }
 
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return TransitionConfiguration.Presentation.duration
+        
+        guard let manager = self.manager, let respondingView = manager.respondingVC, let appearanceProvider = respondingView as? HalfSheetAppearanceProtocol else {
+            return TransitionConfiguration.Presentation.duration
+        }
+        
+        return appearanceProvider.presentAnimationDuration
     }
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {

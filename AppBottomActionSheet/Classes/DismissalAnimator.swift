@@ -21,7 +21,18 @@ public class DismissalAnimator: UIPercentDrivenInteractiveTransition, UIViewCont
     }
 
     public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return isFromGesture ? TransitionConfiguration.Dismissal.durationAfterGesture : TransitionConfiguration.Dismissal.duration
+        
+        switch isFromGesture {
+        case true:
+            return TransitionConfiguration.Dismissal.durationAfterGesture
+            
+        case false:
+            guard let manager = self.manager, let respondingView = manager.respondingVC, let appearanceProvider = respondingView as? HalfSheetAppearanceProtocol else {
+                return TransitionConfiguration.Presentation.duration
+            }
+            
+            return appearanceProvider.dismissAnimationDuration
+        }
     }
 
     public func interruptibleAnimator(using transitionContext: UIViewControllerContextTransitioning) -> UIViewImplicitlyAnimating {
@@ -38,7 +49,7 @@ public class DismissalAnimator: UIPercentDrivenInteractiveTransition, UIViewCont
 
         weak var weakManager = manager
 
-        let finalTransform = CGAffineTransform(translationX: 0, y: shouldSlideAuxilery ? containerHeight : presentedContentHeight )
+        let finalTransform = CGAffineTransform(translationX: 0, y: shouldSlideAuxilery ? containerHeight : presentedContentHeight)
 
         func animate() {
             presentedControllerView.layer.transform = finalTransform.as3D

@@ -10,52 +10,48 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Dismiss BarVC-->
+        <!--Dismiss Bar View Controller-->
         <scene sceneID="cFs-cf-9hT">
             <objects>
-                <viewController storyboardIdentifier="DismissBarVC" id="h5B-fa-pnc" customClass="DismissBarVC" customModule="AppBottomActionSheet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DismissBarViewController" id="h5B-fa-pnc" customClass="DismissBarViewController" customModule="AppBottomActionSheet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="YGM-in-2Br">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2w-p5-ys6">
-                                <rect key="frame" x="0.0" y="647" width="375" height="64"/>
+                                <rect key="frame" x="10" y="647" width="355" height="64"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="Glo-4B-GRR"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="18"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
-                            <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oez-Fr-Vle">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oez-Fr-Vle">
                                 <rect key="frame" x="165.5" y="661" width="44" height="6"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="Q0t-YQ-gMP"/>
                                     <constraint firstAttribute="height" constant="6" id="ebx-J3-IM1"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="oez-Fr-Vle" firstAttribute="centerX" secondItem="YGM-in-2Br" secondAttribute="centerX" id="6GZ-6O-CQc"/>
                             <constraint firstAttribute="bottom" secondItem="oez-Fr-Vle" secondAttribute="bottom" id="EjU-s5-Tqc"/>
-                            <constraint firstItem="f2w-p5-ys6" firstAttribute="leading" secondItem="i9m-Dv-cX3" secondAttribute="leading" id="Qjd-Qc-060"/>
-                            <constraint firstItem="i9m-Dv-cX3" firstAttribute="trailing" secondItem="f2w-p5-ys6" secondAttribute="trailing" id="aCP-nW-f6s"/>
+                            <constraint firstItem="f2w-p5-ys6" firstAttribute="leading" secondItem="i9m-Dv-cX3" secondAttribute="leading" constant="10" id="Qjd-Qc-060"/>
+                            <constraint firstItem="i9m-Dv-cX3" firstAttribute="trailing" secondItem="f2w-p5-ys6" secondAttribute="trailing" constant="10" id="aCP-nW-f6s"/>
                             <constraint firstItem="i9m-Dv-cX3" firstAttribute="bottom" secondItem="f2w-p5-ys6" secondAttribute="bottom" constant="-44" id="ati-jW-Lf0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i9m-Dv-cX3"/>
                     </view>
                     <connections>
                         <outlet property="backgroundView" destination="f2w-p5-ys6" id="5Zw-K4-3l6"/>
+                        <outlet property="dismissIndicator" destination="oez-Fr-Vle" id="b3m-HG-g2E"/>
+                        <outlet property="indicatorBottomCons" destination="EjU-s5-Tqc" id="WCD-HV-9gL"/>
+                        <outlet property="indicatorHeightCons" destination="ebx-J3-IM1" id="DGu-es-BBH"/>
+                        <outlet property="indicatorWidthCons" destination="Q0t-YQ-gMP" id="bSO-NU-NDD"/>
+                        <outlet property="leadingCons" destination="Qjd-Qc-060" id="6II-tF-r5H"/>
+                        <outlet property="trailingCons" destination="aCP-nW-f6s" id="4Zi-em-cnM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JIz-Er-pNn" userLabel="First Responder" sceneMemberID="firstResponder"/>

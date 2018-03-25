@@ -14,7 +14,7 @@ public class PresentationViewController: UIPresentationController, AnimatorConve
 
     lazy var backgroundView: UIView = { [unowned self] in
         let view = UIView()
-        view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        view.backgroundColor = DismissView.overlay            
         return view
     }()
 
@@ -26,7 +26,7 @@ public class PresentationViewController: UIPresentationController, AnimatorConve
 
     lazy var presentingViewContainer: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = 12.0
+        view.layer.cornerRadius = 0
         view.layer.borderColor = UIColor.white.withAlphaComponent(0.15).cgColor
         view.layer.borderWidth = 0.5
         view.clipsToBounds = true
@@ -76,10 +76,7 @@ public class PresentationViewController: UIPresentationController, AnimatorConve
 
     override public func presentationTransitionWillBegin() {
 
-        guard
-            let containerView = containerView,
-            let presentedView = presentedView
-        else {
+        guard let containerView = containerView, let presentedView = presentedView else {
             return
         }
 
@@ -108,10 +105,11 @@ public class PresentationViewController: UIPresentationController, AnimatorConve
             UIEdgeInsets(withTop: topContainerOffset)
         )
 
-        if let appearanceProvider = respondingVC as? HalfSheetAppearanceProtocol {
-            presentedView.clipsToBounds = true
-            presentedView.round(corners: [.topLeft, .topRight], radius: appearanceProvider.cornerRadius)
-        }
+//        if let appearanceProvider = respondingVC as? HalfSheetAppearanceProtocol {
+//            
+//            presentedView.clipsToBounds = true
+//            presentedView.round(corners: [.topLeft, .topRight], radius: appearanceProvider.cornerRadius)
+//        }
 
         presentedView.add(gestureRecognizer: manager?.dismissingPanGesture)
         backgroundView.add(gestureRecognizer: manager?.backgroundViewDismissTrigger)
