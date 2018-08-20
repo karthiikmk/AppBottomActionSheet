@@ -6,11 +6,11 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   AppBottomActionSheet:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   AppBottomActionSheet: 77075e41a293a9f97edafd8f3262da38442a6af6
 
-PODFILE CHECKSUM: f07eedd6fd460c0524825775aecd7f1a8646c1cc
+PODFILE CHECKSUM: ad880350d25c8af549b7dfbbb63ae1cb1d60c0d8
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
