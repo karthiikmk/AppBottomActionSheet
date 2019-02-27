@@ -5,11 +5,20 @@
 [![License](https://img.shields.io/cocoapods/l/AppBottomActionSheet.svg?style=flat)](http://cocoapods.org/pods/AppBottomActionSheet)
 [![Platform](https://img.shields.io/cocoapods/p/AppBottomActionSheet.svg?style=flat)](http://cocoapods.org/pods/AppBottomActionSheet)
 
-## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+A ActionSheet Style presenting viewcontroller to make the feel like facebook, whatsapp option menu. Download and run to get the better view of the pod.
+
+
+##### Facebook style
+
+![Effect](https://github.com/karthikAdaptavant/AppBottomActionSheet//raw/master/facebookstyle.PNG)
+
+#### Whatsapp style
+![Effect](https://github.com/karthikAdaptavant/AppBottomActionSheet//raw/master/whatsappstyle.PNG)
 
 ## Requirements
+   ios 10+
+   Swift 3.3
 
 ## Installation
 
