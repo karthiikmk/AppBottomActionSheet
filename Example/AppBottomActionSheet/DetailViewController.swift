@@ -43,7 +43,7 @@ class DetailViewController: UIViewController, HalfSheetPresentableProtocol, Half
     
     var sheetHeight: CGFloat? = 400
     
-    var managedScrollView: UIScrollView? {
+    weak var managedScrollView: UIScrollView? {
         return nil
     }
     
