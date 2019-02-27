@@ -47,6 +47,7 @@ public protocol HalfSheetTopVCProviderProtocol: class {
      var topVCTransitionStyle: HalfSheetTopVCTransitionStyle { get }
 }
 
+/// HalfSheetCompletionProtocol has to be used in viewcontroller which presents the halfsheet. not inside the halfsheet. 
 public protocol HalfSheetCompletionProtocol: class {
     func didDismiss()
 }
