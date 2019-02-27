@@ -56,7 +56,7 @@ class DetailViewController: UIViewController, HalfSheetPresentableProtocol, Half
     }
 }
 
-extension DetailViewController: HalfSheetAppearanceProtocol {
+extension DetailViewController: HalfSheetAppearanceProtocol, HalfSheetCompletionProtocol {
     
     var presentAnimationDuration: TimeInterval {
         return 0.35
@@ -64,5 +64,9 @@ extension DetailViewController: HalfSheetAppearanceProtocol {
     
     var dismissAnimationDuration: TimeInterval {
         return 0.25
+    }
+    
+    func didDismiss() {
+        print("dismiss called")
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 import AppBottomActionSheet
 
-class ViewController: UIViewController, HalfSheetPresentingProtocol {
+class ViewController: UIViewController, HalfSheetPresentingProtocol, HalfSheetCompletionProtocol {
     
     var transitionManager: HalfSheetPresentationManager!
     
@@ -27,6 +27,10 @@ class ViewController: UIViewController, HalfSheetPresentingProtocol {
         
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         presentUsingHalfSheet(vc)
+    }
+    
+    func didDismiss() {
+        print("dismiss called in view controller")
     }
 }
 

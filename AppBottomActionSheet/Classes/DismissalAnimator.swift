@@ -29,8 +29,7 @@ public class DismissalAnimator: UIPercentDrivenInteractiveTransition, UIViewCont
         case false:
             guard let manager = self.manager, let respondingView = manager.respondingVC, let appearanceProvider = respondingView as? HalfSheetAppearanceProtocol else {
                 return TransitionConfiguration.Presentation.duration
-            }
-            
+            }            
             return appearanceProvider.dismissAnimationDuration
         }
     }

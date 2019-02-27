@@ -1,0 +1,6 @@
+framework module AppBottomActionSheet {
+  umbrella header "AppBottomActionSheet-umbrella.h"
+
+  export *
+  module * { export * }
+}
