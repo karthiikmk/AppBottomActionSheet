@@ -53,9 +53,9 @@
 		250A6F917025A2CA9D6CF6894A49128D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		326DD1B0EBAE1AA6B8CA4F3278561765 /* Pods-AppBottomActionSheet_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppBottomActionSheet_Example.release.xcconfig"; sourceTree = "<group>"; };
 		336861EA5EB4910E0D5DA03BF84D18F8 /* AppBottomActionSheet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AppBottomActionSheet-umbrella.h"; sourceTree = "<group>"; };
-		3593461EF1BB474605909050DAB41B21 /* AppBottomActionSheet.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = AppBottomActionSheet.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3593461EF1BB474605909050DAB41B21 /* AppBottomActionSheet.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = AppBottomActionSheet.podspec; sourceTree = "<group>"; };
 		384B45E62D09D9E6076D37A015A9DBB6 /* AppBottomActionSheet.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppBottomActionSheet.xcconfig; sourceTree = "<group>"; };
-		45ADCA7D072B1503F9A1976C64A9D0AC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		45ADCA7D072B1503F9A1976C64A9D0AC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4842DF63ECAE19016531D21884C8D987 /* Pods-AppBottomActionSheet_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppBottomActionSheet_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4C2E803768E05000CE7D352FCF28305E /* AppBottomActionSheet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AppBottomActionSheet-dummy.m"; sourceTree = "<group>"; };
 		51D9DD3D5864A9BD74A77453D7D83AE6 /* Pods-AppBottomActionSheet_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AppBottomActionSheet_Example-resources.sh"; sourceTree = "<group>"; };
@@ -66,13 +66,13 @@
 		69209A522AAFC6E7D929F10D3B94EE67 /* Pods-AppBottomActionSheet_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppBottomActionSheet_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		6926378931D43E771119371AE5197E95 /* DismissBar.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = DismissBar.storyboard; path = AppBottomActionSheet/Classes/DismissBar.storyboard; sourceTree = "<group>"; };
 		699DAE10D669ECDBC9D5345140EDEC39 /* Protocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = AppBottomActionSheet/Classes/Protocols.swift; sourceTree = "<group>"; };
-		6EEC37465062224287529254555E133D /* AppBottomActionSheet.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = AppBottomActionSheet.bundle; path = "AppBottomActionSheet-AppBottomActionSheet.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EEC37465062224287529254555E133D /* AppBottomActionSheet.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppBottomActionSheet.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		7009E87157E661AA4D941BE6DDEE6B8B /* Pods-AppBottomActionSheet_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AppBottomActionSheet_Example-frameworks.sh"; sourceTree = "<group>"; };
-		742277E041FC09958AE924EA53AD2705 /* Pods_AppBottomActionSheet_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AppBottomActionSheet_Example.framework; path = "Pods-AppBottomActionSheet_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		742277E041FC09958AE924EA53AD2705 /* Pods_AppBottomActionSheet_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppBottomActionSheet_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75991C18923B3737A3B89C77AA4328F9 /* DismissBarViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DismissBarViewController.swift; path = AppBottomActionSheet/Classes/DismissBarViewController.swift; sourceTree = "<group>"; };
 		7ED7D7425F49B46E73D996A1F0C93B97 /* PresentationProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentationProtocol.swift; path = AppBottomActionSheet/Classes/PresentationProtocol.swift; sourceTree = "<group>"; };
-		8132793A87A17558ED037A385C40F163 /* AppBottomActionSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AppBottomActionSheet.framework; path = AppBottomActionSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8132793A87A17558ED037A385C40F163 /* AppBottomActionSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppBottomActionSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		965DF0FD083B1EB1C0B4ADEA67B453E7 /* Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = AppBottomActionSheet/Classes/Utilities.swift; sourceTree = "<group>"; };
 		9738FFC599E6D574158FF07D16AF521C /* AppBottomActionSheet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AppBottomActionSheet-prefix.pch"; sourceTree = "<group>"; };
 		B8EEFDF173F4586330574CC47574D48E /* AppBottomActionSheet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AppBottomActionSheet.modulemap; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E11849738ACC10261AC7823715DA9843 /* Pods-AppBottomActionSheet_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AppBottomActionSheet_Example-dummy.m"; sourceTree = "<group>"; };
 		E19B96B1F92611EADD8502E2DEE63117 /* PresentationAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentationAnimator.swift; path = AppBottomActionSheet/Classes/PresentationAnimator.swift; sourceTree = "<group>"; };
-		EFD0BEE8001201015B3E672FA5562C48 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		EFD0BEE8001201015B3E672FA5562C48 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,13 +322,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
+				TargetAttributes = {
+					CFB78AD047257B6D6680CEDE1D6CE52B = {
+						ProvisioningStyle = Manual;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -447,7 +453,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -460,10 +466,13 @@
 			baseConfigurationReference = 384B45E62D09D9E6076D37A015A9DBB6 /* AppBottomActionSheet.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AppBottomActionSheet";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Target Support Files/AppBottomActionSheet/ResourceBundle-AppBottomActionSheet-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_NAME = AppBottomActionSheet;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -530,7 +539,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -541,6 +550,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -608,10 +618,13 @@
 			baseConfigurationReference = 384B45E62D09D9E6076D37A015A9DBB6 /* AppBottomActionSheet.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AppBottomActionSheet";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Target Support Files/AppBottomActionSheet/ResourceBundle-AppBottomActionSheet-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_NAME = AppBottomActionSheet;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -623,6 +636,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -674,8 +688,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};

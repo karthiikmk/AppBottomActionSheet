@@ -14,7 +14,7 @@ public class VerticalPanGestureRecognizer: UIPanGestureRecognizer {
     override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
         super.touchesMoved(touches, with:event)
 
-        if let view = self.view, fabs(velocity(in: view).x) > fabs(velocity(in: view).y) {
+        if let view = self.view, abs(velocity(in: view).x) > abs(velocity(in: view).y) {
             state = .failed
             return
         }

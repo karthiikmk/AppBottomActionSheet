@@ -27,11 +27,11 @@ public enum DismissMethod {
 
 internal extension Array where Element == DismissMethod {
     
-    internal var allowSwipe: Bool {
+    var allowSwipe: Bool {
         return contains(.swipe)
     }
 
-    internal var allowTap: Bool {
+    var allowTap: Bool {
         return contains(.tap)
     }
 }
@@ -58,7 +58,7 @@ public protocol HalfSheetAppearanceProtocol: class {
 }
 
 public extension HalfSheetPresentableProtocol where Self: UIViewController {
-    public func didUpdateSheetHeight() {
+    func didUpdateSheetHeight() {
         (navigationController?.transitioningDelegate as? HalfSheetPresentationManager ?? transitioningDelegate as? HalfSheetPresentationManager)?.didChangeSheetHeight()
     }
 }
