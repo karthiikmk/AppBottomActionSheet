@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AppBottomActionSheet'
-  s.version          = '1.0'
+  s.version          = '1.0.1'
   s.swift_version    = '4.2'
   s.summary          = 'A Sweet extension for custom bottom sheet'
   s.homepage         = 'https://github.com/karthikAdaptavant/AppBottomActionSheet'
