@@ -4,36 +4,3 @@
 
 # For more information about the Appfile, see:
 #     https://docs.fastlane.tools/advanced/#appfile
-
-fastlane_version "2.61.0"
-default_platform(:ios)
-
-platform :ios do
-
-  desc "Release a new version with a patch bump_type"
-  lane :patch do
-    release("patch") # we could use __method__.to_s instead of duplicating the name
-  end
-
-  desc "Release a new version with a minor bump_type"
-  lane :minor do
-    release("minor")
-  end
-
-  desc "Release a new version with a major bump_type"
-  lane :major do
-    release("major")
-  end
-
-  def release(type)
-    pod_lib_lint
-    version = version_bump_podspec(path: "AppBottomActionSheet.podspec",
-                                   bump_type: type)
-    git_add(path: "AppBottomActionSheet.podspec")
-    git_commit(path: ["AppBottomActionSheet.podspec"],
-               message: "#{version} release")
-    add_git_tag(tag: "#{version}")
-    push_to_git_remote
-    pod_push
-  end
-end

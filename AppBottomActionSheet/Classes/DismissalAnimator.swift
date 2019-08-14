@@ -10,7 +10,7 @@ import Foundation
 
 public class DismissalAnimator: UIPercentDrivenInteractiveTransition, UIViewControllerAnimatedTransitioning, AnimatorConvenience {
 
-    weak public var manager: HalfSheetPresentationManager?
+    public weak var manager: HalfSheetPresentationManager?
 
     var isFromGesture: Bool = false
     var animator: UIViewPropertyAnimator?
@@ -34,9 +34,9 @@ public class DismissalAnimator: UIPercentDrivenInteractiveTransition, UIViewCont
         }
     }
 
-    public func interruptibleAnimator(using transitionContext: UIViewControllerContextTransitioning) -> UIViewImplicitlyAnimating {
-        return transition(using: transitionContext)
-    }
+//    public func interruptibleAnimator(using transitionContext: UIViewControllerContextTransitioning) -> UIViewImplicitlyAnimating {
+//        return transition(using: transitionContext)
+//    }
 
     public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         transition(using: transitionContext)
@@ -61,11 +61,10 @@ public class DismissalAnimator: UIPercentDrivenInteractiveTransition, UIViewCont
         func complete(completed: Bool) {
 
             let finished = completed && !transitionContext.transitionWasCancelled
-
             if finished {
                 weakManager?.dismissComplete()
+                transitionContext.finishInteractiveTransition()
             }
-
             transitionContext.completeTransition(finished)
         }
 
