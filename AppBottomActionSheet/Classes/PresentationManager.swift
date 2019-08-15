@@ -67,19 +67,19 @@ public class HalfSheetPresentationManager: NSObject, UIGestureRecognizerDelegate
     // MARK: Gesture Recoginzers
     //
 
-    @objc func handleDismissingTap() {
+    @objc
+    func handleDismissingTap() {
         guard allowTapToDismiss, !isScrolling else { return }
         dismissPresentedVC()
     }
 
-    @objc func handleDismissingPan(_ pan: UIPanGestureRecognizer) {
+    @objc
+    func handleDismissingPan(_ pan: UIPanGestureRecognizer) {
         
-        guard allowTapToDismiss, !isScrolling else { return }
+        guard allowSwipeToDismiss, !isScrolling else { return }
 
         let translation = pan.translation(in: containerView)
-        
         let velocity = pan.velocity(in: containerView)
-
         let d: CGFloat = max(translation.y, 0) / containerHeight
 
         switch pan.state {
@@ -118,10 +118,7 @@ public class HalfSheetPresentationManager: NSObject, UIGestureRecognizerDelegate
     public func updateForScrollPosition(yOffset: CGFloat) {
 
         let fullOffset = yOffset + topOffset
-
-        guard fullOffset < 0 else {
-            return
-        }
+        guard fullOffset < 0 else { return }
 
         let forwardTransform = CGAffineTransform(translationX: 0, y: -fullOffset)
         let backwardsTransform = CGAffineTransform(translationX: 0, y: fullOffset)

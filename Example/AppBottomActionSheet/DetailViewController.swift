@@ -44,7 +44,7 @@ class DetailViewController: UIViewController, HalfSheetPresentableProtocol, Half
     }
     
     var dismissMethod: [DismissMethod] {
-        return [.tap, .swipe]
+        return [.tap]
     }
     
     @IBAction func dismiss() {
