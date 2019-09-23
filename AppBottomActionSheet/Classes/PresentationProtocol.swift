@@ -15,14 +15,14 @@ public protocol HalfSheetPresentingProtocol: class {
 
 public extension HalfSheetPresentingProtocol where Self: UIViewController {
 
-    public func presentUsingHalfSheet(_ vc: UIViewController, animated: Bool = true) {
+    func presentUsingHalfSheet(_ vc: UIViewController, animated: Bool = true) {
         transitionManager = HalfSheetPresentationManager()
         vc.transitioningDelegate = transitionManager
         vc.modalPresentationStyle = .custom
         present(vc, animated: animated)
     }
 
-    @discardableResult public func presentUsingHalfSheetInNC(_ vc: UIViewController, animated: Bool = true) -> UINavigationController {
+    @discardableResult func presentUsingHalfSheetInNC(_ vc: UIViewController, animated: Bool = true) -> UINavigationController {
         let nc = UINavigationController(rootViewController: vc)
         transitionManager = HalfSheetPresentationManager()
         nc.transitioningDelegate = transitionManager

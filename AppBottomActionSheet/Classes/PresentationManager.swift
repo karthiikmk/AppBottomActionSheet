@@ -52,11 +52,11 @@ public class HalfSheetPresentationManager: NSObject, UIGestureRecognizerDelegate
     public override init() {
         super.init()
 
-        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationWillResignActive, object: nil, queue: OperationQueue.main) { [weak self] _ in
+        NotificationCenter.default.addObserver(forName: UIApplication.willResignActiveNotification, object: nil, queue: OperationQueue.main) { [weak self] _ in
             self?.unlinkDisplay()
         }
 
-        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationDidBecomeActive, object: nil, queue: OperationQueue.main) { [weak self] _ in
+        NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: OperationQueue.main) { [weak self] _ in
             self?.linkDisplay()
         }
 
@@ -67,19 +67,19 @@ public class HalfSheetPresentationManager: NSObject, UIGestureRecognizerDelegate
     // MARK: Gesture Recoginzers
     //
 
-    @objc func handleDismissingTap() {
+    @objc
+    func handleDismissingTap() {
         guard allowTapToDismiss, !isScrolling else { return }
         dismissPresentedVC()
     }
 
-    @objc func handleDismissingPan(_ pan: UIPanGestureRecognizer) {
+    @objc
+    func handleDismissingPan(_ pan: UIPanGestureRecognizer) {
         
-        guard allowTapToDismiss, !isScrolling else { return }
+        guard allowSwipeToDismiss, !isScrolling else { return }
 
         let translation = pan.translation(in: containerView)
-        
         let velocity = pan.velocity(in: containerView)
-
         let d: CGFloat = max(translation.y, 0) / containerHeight
 
         switch pan.state {
@@ -118,10 +118,7 @@ public class HalfSheetPresentationManager: NSObject, UIGestureRecognizerDelegate
     public func updateForScrollPosition(yOffset: CGFloat) {
 
         let fullOffset = yOffset + topOffset
-
-        guard fullOffset < 0 else {
-            return
-        }
+        guard fullOffset < 0 else { return }
 
         let forwardTransform = CGAffineTransform(translationX: 0, y: -fullOffset)
         let backwardsTransform = CGAffineTransform(translationX: 0, y: fullOffset)
@@ -243,7 +240,7 @@ extension HalfSheetPresentationManager {
         copyPresentingViewToTransitionContext(afterScreenUpdate: true)
         displayLink?.invalidate()
         displayLink = UIScreen.main.displayLink(withTarget: self, selector: #selector(HalfSheetPresentationManager.displayDidRefresh(_:)))
-        displayLink?.add(to: .main, forMode: .defaultRunLoopMode)
+        displayLink?.add(to: .main, forMode: RunLoop.Mode.default)
     }
 
     @objc private func displayDidRefresh(_ displayLink: CADisplayLink) {

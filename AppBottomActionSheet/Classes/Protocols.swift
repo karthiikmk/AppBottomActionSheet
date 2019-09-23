@@ -15,7 +15,6 @@ public enum HalfSheetTopVCTransitionStyle {
     internal var isSlide: Bool {
         return self == .slide
     }
-
     internal var isFade: Bool {
         return self == .fade
     }
@@ -28,17 +27,17 @@ public enum DismissMethod {
 
 internal extension Array where Element == DismissMethod {
     
-    internal var allowSwipe: Bool {
+    var allowSwipe: Bool {
         return contains(.swipe)
     }
 
-    internal var allowTap: Bool {
+    var allowTap: Bool {
         return contains(.tap)
     }
 }
 
 public protocol HalfSheetPresentableProtocol: class {
-    weak var managedScrollView: UIScrollView? { get }
+    var managedScrollView: UIScrollView? { get }
     var dismissMethod: [DismissMethod] { get }
     var sheetHeight: CGFloat? { get }
 }
@@ -48,6 +47,7 @@ public protocol HalfSheetTopVCProviderProtocol: class {
      var topVCTransitionStyle: HalfSheetTopVCTransitionStyle { get }
 }
 
+/// HalfSheetCompletionProtocol has to be used in viewcontroller which presents the halfsheet. not inside the halfsheet. 
 public protocol HalfSheetCompletionProtocol: class {
     func didDismiss()
 }
@@ -58,7 +58,7 @@ public protocol HalfSheetAppearanceProtocol: class {
 }
 
 public extension HalfSheetPresentableProtocol where Self: UIViewController {
-    public func didUpdateSheetHeight() {
+    func didUpdateSheetHeight() {
         (navigationController?.transitioningDelegate as? HalfSheetPresentationManager ?? transitioningDelegate as? HalfSheetPresentationManager)?.didChangeSheetHeight()
     }
 }

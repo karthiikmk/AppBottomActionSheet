@@ -8,8 +8,8 @@
 
 import Foundation
 
-public protocol AnimatorConvenience {
-    weak var manager: HalfSheetPresentationManager? { get }
+public protocol AnimatorConvenience: class {
+    var manager: HalfSheetPresentationManager? { get }
 }
 
 extension AnimatorConvenience {
@@ -58,7 +58,7 @@ extension AnimatorConvenience {
     // MARK: Scroll View
     //
 
-    var managedScrollView: UIScrollView? {
+    weak var managedScrollView: UIScrollView? {
         return manager?.presentationController?.managedScrollView
     }
 

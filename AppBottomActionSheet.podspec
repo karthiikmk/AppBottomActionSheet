@@ -2,8 +2,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AppBottomActionSheet'
-  s.version          = '1.0'
-  s.swift_version    = '4.0'
+  s.version          = '1.0.5'
+  s.swift_version    = '4.2'
   s.summary          = 'A Sweet extension for custom bottom sheet'
   s.homepage         = 'https://github.com/karthikAdaptavant/AppBottomActionSheet'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

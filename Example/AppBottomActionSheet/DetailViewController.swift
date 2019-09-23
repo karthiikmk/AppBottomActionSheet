@@ -34,16 +34,12 @@ class DetailViewController: UIViewController, HalfSheetPresentableProtocol, Half
     
     lazy var topVC: UIViewController = {
         DismissView.canShow = false
-        //DismissView.indicatorWidth = 25
-        //DismissView.indicatorColor = UIColor.black.withAlphaComponent(0.3)
-        //DismissView.indicatorSpacing = 8
-//        DismissView.indicatorColor = .clear
         return DismissBarViewController.instance()!
     }()
     
     var sheetHeight: CGFloat? = 400
     
-    var managedScrollView: UIScrollView? {
+    weak var managedScrollView: UIScrollView? {
         return nil
     }
     

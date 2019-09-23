@@ -10,10 +10,11 @@ import Foundation
 
 public class DismissalAnimator: UIPercentDrivenInteractiveTransition, UIViewControllerAnimatedTransitioning, AnimatorConvenience {
 
-    weak public var manager: HalfSheetPresentationManager?
+    public weak var manager: HalfSheetPresentationManager?
 
     var isFromGesture: Bool = false
     var animator: UIViewPropertyAnimator?
+    var interuptableAnimator: UIViewImplicitlyAnimating?
 
     public init(manager: HalfSheetPresentationManager) {
         super.init()
@@ -29,24 +30,27 @@ public class DismissalAnimator: UIPercentDrivenInteractiveTransition, UIViewCont
         case false:
             guard let manager = self.manager, let respondingView = manager.respondingVC, let appearanceProvider = respondingView as? HalfSheetAppearanceProtocol else {
                 return TransitionConfiguration.Presentation.duration
-            }
-            
+            }            
             return appearanceProvider.dismissAnimationDuration
         }
     }
 
     public func interruptibleAnimator(using transitionContext: UIViewControllerContextTransitioning) -> UIViewImplicitlyAnimating {
-        return transition(using: transitionContext)
+        guard let interupt = interuptableAnimator else {
+            interuptableAnimator = transition(using: transitionContext)
+            return interuptableAnimator!
+        }
+        
+        return interupt
     }
 
     public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        transition(using: transitionContext)
+        interuptableAnimator = transition(using: transitionContext)
     }
 
-    @discardableResult private func transition(using transitionContext: UIViewControllerContextTransitioning) -> UIViewImplicitlyAnimating {
+    private func transition(using transitionContext: UIViewControllerContextTransitioning) -> UIViewImplicitlyAnimating {
 
         let presentedControllerView = transitionContext.view(forKey: UITransitionContextViewKey.from)!
-
         weak var weakManager = manager
 
         let finalTransform = CGAffineTransform(translationX: 0, y: shouldSlideAuxilery ? containerHeight : presentedContentHeight)
@@ -62,11 +66,10 @@ public class DismissalAnimator: UIPercentDrivenInteractiveTransition, UIViewCont
         func complete(completed: Bool) {
 
             let finished = completed && !transitionContext.transitionWasCancelled
-
             if finished {
                 weakManager?.dismissComplete()
+                transitionContext.finishInteractiveTransition()
             }
-
             transitionContext.completeTransition(finished)
         }
 
