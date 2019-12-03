@@ -5,7 +5,7 @@
 //  Created by karthikAdaptavant on 03/21/2018.
 //  Copyright (c) 2018 karthikAdaptavant. All rights reserved.
 //
-import Foundation
+import UIKit
 
 extension UIView {
 

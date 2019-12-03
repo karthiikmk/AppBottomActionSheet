@@ -6,7 +6,7 @@
 //  Copyright (c) 2018 karthikAdaptavant. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class PresentationAnimator: NSObject, UIViewControllerAnimatedTransitioning, AnimatorConvenience {
 
