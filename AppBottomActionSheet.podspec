@@ -12,11 +12,10 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/i_am_kaarthik'
 
   s.ios.deployment_target = '10.0'
-
-  s.source_files = 'AppBottomActionSheet/Classes/**/*.{swift}'
+  s.source_files = 'Sources/AppBottomActionSheet/Classes/**/*.{swift}'
   
   s.resource_bundles = {
-    'AppBottomActionSheet' => ['AppBottomActionSheet/Classes/**/*.{storyboard}']
+    'AppBottomActionSheet' => ['Sources/AppBottomActionSheet/Classes/**/*.{storyboard}']
   }
 
 end
