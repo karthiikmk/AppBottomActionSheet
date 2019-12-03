@@ -17,8 +17,8 @@ A ActionSheet Style presenting viewcontroller to make the feel like facebook, wh
 ![Effect](https://github.com/karthikAdaptavant/AppBottomActionSheet//raw/master/whatsappstyle.PNG)
 
 ## Requirements
-   ios 10+
-   Swift 3.3
+   ios 11+
+   Swift 4.2
 
 ## Installation
 
@@ -28,6 +28,11 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'AppBottomActionSheet'
 ```
+### Swift Package Manager
+AppBottomActionSheet is available through Swift Package Manager. To install it, simply add the following dependency to your Package.swift
+```` swift
+.package(url: "https://github.com/karthikAdaptavant/AppBottomActionSheet.git", from: "1.0.6")
+````
 
 ## Author
 
