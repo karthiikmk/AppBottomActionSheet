@@ -1,5 +1,5 @@
 PODS:
-  - AppBottomActionSheet (1.0)
+  - AppBottomActionSheet (1.0.5)
 
 DEPENDENCIES:
   - AppBottomActionSheet (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AppBottomActionSheet: 77075e41a293a9f97edafd8f3262da38442a6af6
+  AppBottomActionSheet: af0a3327317086b796a6c1b441120b8668768b59
 
-PODFILE CHECKSUM: ad880350d25c8af549b7dfbbb63ae1cb1d60c0d8
+PODFILE CHECKSUM: 52f9dfcf0fea921dacbdc38f55ecabcddae74b2e
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4
