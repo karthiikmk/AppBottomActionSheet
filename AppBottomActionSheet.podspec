@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AppBottomActionSheet'
-  s.version          = '1.0.8'
+  s.version          = '1.0.9'
   s.swift_version    = '5.0'
   s.summary          = 'A Sweet extension for custom bottom sheet'
   s.homepage         = 'https://github.com/karthikAdaptavant/AppBottomActionSheet'
@@ -19,3 +19,6 @@ Pod::Spec.new do |s|
   }
 
 end
+
+
+# To Make a new build, run fastlane. 
