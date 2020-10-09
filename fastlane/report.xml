@@ -5,47 +5,47 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: Verifying fastlane version" time="0.01462">
+      <testcase classname="fastlane.lanes" name="0: Verifying fastlane version" time="0.00057">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.004337">
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.000271">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: pod_lib_lint" time="13.278937">
+      <testcase classname="fastlane.lanes" name="2: pod_lib_lint" time="21.159114">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: version_bump_podspec" time="0.009619">
+      <testcase classname="fastlane.lanes" name="3: version_bump_podspec" time="0.000985">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: git_add" time="0.028049">
+      <testcase classname="fastlane.lanes" name="4: git_add" time="0.014587">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="5: git_commit" time="0.046097">
+      <testcase classname="fastlane.lanes" name="5: git_commit" time="0.027663">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="6: add_git_tag" time="0.024011">
+      <testcase classname="fastlane.lanes" name="6: add_git_tag" time="0.017644">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="7: push_to_git_remote" time="4.372695">
+      <testcase classname="fastlane.lanes" name="7: push_to_git_remote" time="4.973796">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="8: pod_push" time="101.797317">
+      <testcase classname="fastlane.lanes" name="8: pod_push" time="26.772091">
         
       </testcase>
     
